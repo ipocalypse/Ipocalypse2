@@ -14,8 +14,27 @@
 		8603B6BD141AEB1C00B68376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6BC141AEB1C00B68376 /* main.m */; };
 		8603B6C1141AEB1C00B68376 /* IpocalypseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */; };
 		8603B6C4141AEB1C00B68376 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6C2141AEB1C00B68376 /* MainWindow.xib */; };
-		8603B6C7141AEB1C00B68376 /* IpocalypseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */; };
-		8603B6CA141AEB1C00B68376 /* IpocalypseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */; };
+		8603B6E7141AEBCA00B68376 /* 3dar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6D5141AEBCA00B68376 /* 3dar.plist */; };
+		8603B6E8141AEBCA00B68376 /* 3dar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6D8141AEBCA00B68376 /* 3dar_logo.png */; };
+		8603B6E9141AEBCA00B68376 /* 3dar_marker_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6D9141AEBCA00B68376 /* 3dar_marker_icon1.png */; };
+		8603B6EA141AEBCA00B68376 /* 3dar_marker_icon1_focused.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6DA141AEBCA00B68376 /* 3dar_marker_icon1_focused.png */; };
+		8603B6EB141AEBCA00B68376 /* 3dar_pano_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6DB141AEBCA00B68376 /* 3dar_pano_bg.png */; };
+		8603B6EC141AEBCA00B68376 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6DC141AEBCA00B68376 /* bubble.png */; };
+		8603B6ED141AEBCA00B68376 /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6DE141AEBCA00B68376 /* cube.obj */; };
+		8603B6EE141AEBCA00B68376 /* moebius.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6DF141AEBCA00B68376 /* moebius.obj */; };
+		8603B6EF141AEBCA00B68376 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6E0141AEBCA00B68376 /* sphere.obj */; };
+		8603B6F0141AEBCA00B68376 /* star.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6E1141AEBCA00B68376 /* star.obj */; };
+		8603B6F1141AEBCA00B68376 /* ufo.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6E2141AEBCA00B68376 /* ufo.obj */; };
+		8603B6F2141AEBCA00B68376 /* lib3DAR_v2_1_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6E4141AEBCA00B68376 /* lib3DAR_v2_1_1.a */; };
+		8603B6F3141AEBCA00B68376 /* SM3DAR_keys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6E6141AEBCA00B68376 /* SM3DAR_keys.txt */; };
+		8603B6F5141AEC2A00B68376 /* zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6F4141AEC2A00B68376 /* zombie.png */; };
+		8603B6F7141AEC4000B68376 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6F6141AEC4000B68376 /* CoreLocation.framework */; };
+		8603B6F9141AEC4800B68376 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6F8141AEC4800B68376 /* MapKit.framework */; };
+		8603B6FB141AEC5000B68376 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FA141AEC5000B68376 /* OpenGLES.framework */; };
+		8603B6FD141AEC5700B68376 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FC141AEC5700B68376 /* QuartzCore.framework */; };
+		8603B6FF141AEC6B00B68376 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FE141AEC6B00B68376 /* CoreMotion.framework */; };
+		8603B702141AECB000B68376 /* IpocalypseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B700141AECB000B68376 /* IpocalypseViewController.xib */; };
+		8603B705141AECC900B68376 /* IpocalypseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B704141AECC900B68376 /* IpocalypseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +49,29 @@
 		8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpocalypseAppDelegate.h; sourceTree = "<group>"; };
 		8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseAppDelegate.m; sourceTree = "<group>"; };
 		8603B6C3141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpocalypseViewController.h; sourceTree = "<group>"; };
-		8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseViewController.m; sourceTree = "<group>"; };
-		8603B6C9141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IpocalypseViewController.xib; sourceTree = "<group>"; };
+		8603B6D5141AEBCA00B68376 /* 3dar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3dar.plist; sourceTree = "<group>"; };
+		8603B6D8141AEBCA00B68376 /* 3dar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_logo.png; sourceTree = "<group>"; };
+		8603B6D9141AEBCA00B68376 /* 3dar_marker_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon1.png; sourceTree = "<group>"; };
+		8603B6DA141AEBCA00B68376 /* 3dar_marker_icon1_focused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon1_focused.png; sourceTree = "<group>"; };
+		8603B6DB141AEBCA00B68376 /* 3dar_pano_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_pano_bg.png; sourceTree = "<group>"; };
+		8603B6DC141AEBCA00B68376 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		8603B6DE141AEBCA00B68376 /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
+		8603B6DF141AEBCA00B68376 /* moebius.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moebius.obj; sourceTree = "<group>"; };
+		8603B6E0141AEBCA00B68376 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
+		8603B6E1141AEBCA00B68376 /* star.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = star.obj; sourceTree = "<group>"; };
+		8603B6E2141AEBCA00B68376 /* ufo.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ufo.obj; sourceTree = "<group>"; };
+		8603B6E4141AEBCA00B68376 /* lib3DAR_v2_1_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = lib3DAR_v2_1_1.a; sourceTree = "<group>"; };
+		8603B6E5141AEBCA00B68376 /* SM3DAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM3DAR.h; sourceTree = "<group>"; };
+		8603B6E6141AEBCA00B68376 /* SM3DAR_keys.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SM3DAR_keys.txt; sourceTree = "<group>"; };
+		8603B6F4141AEC2A00B68376 /* zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie.png; sourceTree = "<group>"; };
+		8603B6F6141AEC4000B68376 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8603B6F8141AEC4800B68376 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8603B6FA141AEC5000B68376 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8603B6FC141AEC5700B68376 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8603B6FE141AEC6B00B68376 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8603B701141AECB000B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "../../Ipocalypse 3d/Ipocalypse/en.lproj/IpocalypseViewController.xib"; sourceTree = "<group>"; };
+		8603B703141AECC900B68376 /* IpocalypseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IpocalypseViewController.h; path = "../../Ipocalypse 3d/Ipocalypse/IpocalypseViewController.h"; sourceTree = "<group>"; };
+		8603B704141AECC900B68376 /* IpocalypseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IpocalypseViewController.m; path = "../../Ipocalypse 3d/Ipocalypse/IpocalypseViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,9 +79,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8603B6FF141AEC6B00B68376 /* CoreMotion.framework in Frameworks */,
+				8603B6FD141AEC5700B68376 /* QuartzCore.framework in Frameworks */,
+				8603B6FB141AEC5000B68376 /* OpenGLES.framework in Frameworks */,
+				8603B6F9141AEC4800B68376 /* MapKit.framework in Frameworks */,
+				8603B6F7141AEC4000B68376 /* CoreLocation.framework in Frameworks */,
 				8603B6B1141AEB1C00B68376 /* UIKit.framework in Frameworks */,
 				8603B6B3141AEB1C00B68376 /* Foundation.framework in Frameworks */,
 				8603B6B5141AEB1C00B68376 /* CoreGraphics.framework in Frameworks */,
+				8603B6F2141AEBCA00B68376 /* lib3DAR_v2_1_1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +97,8 @@
 		8603B6A1141AEB1C00B68376 = {
 			isa = PBXGroup;
 			children = (
+				8603B6F4141AEC2A00B68376 /* zombie.png */,
+				8603B6D4141AEBCA00B68376 /* 3DAR */,
 				8603B6B6141AEB1C00B68376 /* Ipocalypse */,
 				8603B6AF141AEB1C00B68376 /* Frameworks */,
 				8603B6AD141AEB1C00B68376 /* Products */,
@@ -69,6 +116,11 @@
 		8603B6AF141AEB1C00B68376 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8603B6FE141AEC6B00B68376 /* CoreMotion.framework */,
+				8603B6FC141AEC5700B68376 /* QuartzCore.framework */,
+				8603B6FA141AEC5000B68376 /* OpenGLES.framework */,
+				8603B6F8141AEC4800B68376 /* MapKit.framework */,
+				8603B6F6141AEC4000B68376 /* CoreLocation.framework */,
 				8603B6B0141AEB1C00B68376 /* UIKit.framework */,
 				8603B6B2141AEB1C00B68376 /* Foundation.framework */,
 				8603B6B4141AEB1C00B68376 /* CoreGraphics.framework */,
@@ -82,9 +134,9 @@
 				8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */,
 				8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */,
 				8603B6C2141AEB1C00B68376 /* MainWindow.xib */,
-				8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */,
-				8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */,
-				8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */,
+				8603B703141AECC900B68376 /* IpocalypseViewController.h */,
+				8603B704141AECC900B68376 /* IpocalypseViewController.m */,
+				8603B700141AECB000B68376 /* IpocalypseViewController.xib */,
 				8603B6B7141AEB1C00B68376 /* Supporting Files */,
 			);
 			path = Ipocalypse;
@@ -99,6 +151,60 @@
 				8603B6BE141AEB1C00B68376 /* Ipocalypse-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8603B6D4141AEBCA00B68376 /* 3DAR */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6D5141AEBCA00B68376 /* 3dar.plist */,
+				8603B6D6141AEBCA00B68376 /* Assets */,
+				8603B6E3141AEBCA00B68376 /* Lib */,
+				8603B6E5141AEBCA00B68376 /* SM3DAR.h */,
+				8603B6E6141AEBCA00B68376 /* SM3DAR_keys.txt */,
+			);
+			name = 3DAR;
+			path = "../3DAR SDK v2.1.1 2/3DAR";
+			sourceTree = "<group>";
+		};
+		8603B6D6141AEBCA00B68376 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6D7141AEBCA00B68376 /* images */,
+				8603B6DD141AEBCA00B68376 /* models */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8603B6D7141AEBCA00B68376 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6D8141AEBCA00B68376 /* 3dar_logo.png */,
+				8603B6D9141AEBCA00B68376 /* 3dar_marker_icon1.png */,
+				8603B6DA141AEBCA00B68376 /* 3dar_marker_icon1_focused.png */,
+				8603B6DB141AEBCA00B68376 /* 3dar_pano_bg.png */,
+				8603B6DC141AEBCA00B68376 /* bubble.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		8603B6DD141AEBCA00B68376 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6DE141AEBCA00B68376 /* cube.obj */,
+				8603B6DF141AEBCA00B68376 /* moebius.obj */,
+				8603B6E0141AEBCA00B68376 /* sphere.obj */,
+				8603B6E1141AEBCA00B68376 /* star.obj */,
+				8603B6E2141AEBCA00B68376 /* ufo.obj */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		8603B6E3141AEBCA00B68376 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6E4141AEBCA00B68376 /* lib3DAR_v2_1_1.a */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +256,20 @@
 			files = (
 				8603B6BB141AEB1C00B68376 /* InfoPlist.strings in Resources */,
 				8603B6C4141AEB1C00B68376 /* MainWindow.xib in Resources */,
-				8603B6CA141AEB1C00B68376 /* IpocalypseViewController.xib in Resources */,
+				8603B6E7141AEBCA00B68376 /* 3dar.plist in Resources */,
+				8603B6E8141AEBCA00B68376 /* 3dar_logo.png in Resources */,
+				8603B6E9141AEBCA00B68376 /* 3dar_marker_icon1.png in Resources */,
+				8603B6EA141AEBCA00B68376 /* 3dar_marker_icon1_focused.png in Resources */,
+				8603B6EB141AEBCA00B68376 /* 3dar_pano_bg.png in Resources */,
+				8603B6EC141AEBCA00B68376 /* bubble.png in Resources */,
+				8603B6ED141AEBCA00B68376 /* cube.obj in Resources */,
+				8603B6EE141AEBCA00B68376 /* moebius.obj in Resources */,
+				8603B6EF141AEBCA00B68376 /* sphere.obj in Resources */,
+				8603B6F0141AEBCA00B68376 /* star.obj in Resources */,
+				8603B6F1141AEBCA00B68376 /* ufo.obj in Resources */,
+				8603B6F3141AEBCA00B68376 /* SM3DAR_keys.txt in Resources */,
+				8603B6F5141AEC2A00B68376 /* zombie.png in Resources */,
+				8603B702141AECB000B68376 /* IpocalypseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +282,7 @@
 			files = (
 				8603B6BD141AEB1C00B68376 /* main.m in Sources */,
 				8603B6C1141AEB1C00B68376 /* IpocalypseAppDelegate.m in Sources */,
-				8603B6C7141AEB1C00B68376 /* IpocalypseViewController.m in Sources */,
+				8603B705141AECC900B68376 /* IpocalypseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,10 +305,10 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */ = {
+		8603B700141AECB000B68376 /* IpocalypseViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8603B6C9141AEB1C00B68376 /* en */,
+				8603B701141AECB000B68376 /* en */,
 			);
 			name = IpocalypseViewController.xib;
 			sourceTree = "<group>";
@@ -216,7 +335,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -233,7 +352,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -246,6 +365,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
 				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../3DAR SDK v2.1.1 2/3DAR/Lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -257,6 +385,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
 				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../3DAR SDK v2.1.1 2/3DAR/Lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
