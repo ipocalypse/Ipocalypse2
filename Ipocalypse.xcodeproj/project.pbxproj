@@ -20,6 +20,7 @@
 		8603B6FB141AEC5000B68376 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FA141AEC5000B68376 /* OpenGLES.framework */; };
 		8603B6FD141AEC5700B68376 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FC141AEC5700B68376 /* QuartzCore.framework */; };
 		8603B6FF141AEC6B00B68376 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FE141AEC6B00B68376 /* CoreMotion.framework */; };
+		8603B710141AF98600B68376 /* IpocalypseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B70F141AF98600B68376 /* IpocalypseViewController.xib */; };
 		BEBCAC99141AF57B007E2C96 /* 3dar.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC87141AF57B007E2C96 /* 3dar.plist */; };
 		BEBCAC9A141AF57B007E2C96 /* 3dar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC8A141AF57B007E2C96 /* 3dar_logo.png */; };
 		BEBCAC9B141AF57B007E2C96 /* 3dar_marker_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC8B141AF57B007E2C96 /* 3dar_marker_icon1.png */; };
@@ -54,6 +55,7 @@
 		8603B6FA141AEC5000B68376 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8603B6FC141AEC5700B68376 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8603B6FE141AEC6B00B68376 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8603B70F141AF98600B68376 /* IpocalypseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IpocalypseViewController.xib; sourceTree = "<group>"; };
 		BEBCAC87141AF57B007E2C96 /* 3dar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3dar.plist; sourceTree = "<group>"; };
 		BEBCAC8A141AF57B007E2C96 /* 3dar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_logo.png; sourceTree = "<group>"; };
 		BEBCAC8B141AF57B007E2C96 /* 3dar_marker_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon1.png; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */,
 				8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */,
 				8603B6C2141AEB1C00B68376 /* MainWindow.xib */,
+				8603B70F141AF98600B68376 /* IpocalypseViewController.xib */,
 				8603B6B7141AEB1C00B68376 /* Supporting Files */,
 			);
 			path = Ipocalypse;
@@ -265,6 +268,7 @@
 				BEBCACA2141AF57B007E2C96 /* star.obj in Resources */,
 				BEBCACA3141AF57B007E2C96 /* ufo.obj in Resources */,
 				BEBCACA5141AF57C007E2C96 /* SM3DAR_keys.txt in Resources */,
+				8603B710141AF98600B68376 /* IpocalypseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +356,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
 				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../3DAR SDK v2.1.1 2/3DAR/Lib\"",
@@ -363,6 +368,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
 				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../3DAR SDK v2.1.1 2/3DAR/Lib\"",
@@ -384,6 +391,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
