@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8603B6B1141AEB1C00B68376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6B0141AEB1C00B68376 /* UIKit.framework */; };
+		8603B6B3141AEB1C00B68376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6B2141AEB1C00B68376 /* Foundation.framework */; };
+		8603B6B5141AEB1C00B68376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6B4141AEB1C00B68376 /* CoreGraphics.framework */; };
+		8603B6BB141AEB1C00B68376 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6B9141AEB1C00B68376 /* InfoPlist.strings */; };
+		8603B6BD141AEB1C00B68376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6BC141AEB1C00B68376 /* main.m */; };
+		8603B6C1141AEB1C00B68376 /* IpocalypseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */; };
+		8603B6C4141AEB1C00B68376 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6C2141AEB1C00B68376 /* MainWindow.xib */; };
+		8603B6C7141AEB1C00B68376 /* IpocalypseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */; };
+		8603B6CA141AEB1C00B68376 /* IpocalypseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8603B6AC141AEB1C00B68376 /* Ipocalypse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ipocalypse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8603B6B0141AEB1C00B68376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8603B6B2141AEB1C00B68376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8603B6B4141AEB1C00B68376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8603B6B8141AEB1C00B68376 /* Ipocalypse-Info.plist */ = {isa = PBXFileReference; path = "Ipocalypse-Info.plist"; sourceTree = "<group>"; };
+		8603B6BA141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8603B6BC141AEB1C00B68376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8603B6BE141AEB1C00B68376 /* Ipocalypse-Prefix.pch */ = {isa = PBXFileReference; path = "Ipocalypse-Prefix.pch"; sourceTree = "<group>"; };
+		8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */ = {isa = PBXFileReference; path = IpocalypseAppDelegate.h; sourceTree = "<group>"; };
+		8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseAppDelegate.m; sourceTree = "<group>"; };
+		8603B6C3141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */ = {isa = PBXFileReference; path = IpocalypseViewController.h; sourceTree = "<group>"; };
+		8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseViewController.m; sourceTree = "<group>"; };
+		8603B6C9141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IpocalypseViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8603B6A9141AEB1C00B68376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8603B6B1141AEB1C00B68376 /* UIKit.framework in Frameworks */,
+				8603B6B3141AEB1C00B68376 /* Foundation.framework in Frameworks */,
+				8603B6B5141AEB1C00B68376 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8603B6A1141AEB1C00B68376 = {
+			isa = PBXGroup;
+			children = (
+				8603B6B6141AEB1C00B68376 /* Ipocalypse */,
+				8603B6AF141AEB1C00B68376 /* Frameworks */,
+				8603B6AD141AEB1C00B68376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8603B6AD141AEB1C00B68376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6AC141AEB1C00B68376 /* Ipocalypse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8603B6AF141AEB1C00B68376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6B0141AEB1C00B68376 /* UIKit.framework */,
+				8603B6B2141AEB1C00B68376 /* Foundation.framework */,
+				8603B6B4141AEB1C00B68376 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8603B6B6141AEB1C00B68376 /* Ipocalypse */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */,
+				8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */,
+				8603B6C2141AEB1C00B68376 /* MainWindow.xib */,
+				8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */,
+				8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */,
+				8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */,
+				8603B6B7141AEB1C00B68376 /* Supporting Files */,
+			);
+			path = Ipocalypse;
+			sourceTree = "<group>";
+		};
+		8603B6B7141AEB1C00B68376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8603B6B8141AEB1C00B68376 /* Ipocalypse-Info.plist */,
+				8603B6B9141AEB1C00B68376 /* InfoPlist.strings */,
+				8603B6BC141AEB1C00B68376 /* main.m */,
+				8603B6BE141AEB1C00B68376 /* Ipocalypse-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8603B6AB141AEB1C00B68376 /* Ipocalypse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8603B6CD141AEB1C00B68376 /* Build configuration list for PBXNativeTarget "Ipocalypse" */;
+			buildPhases = (
+				8603B6A8141AEB1C00B68376 /* Sources */,
+				8603B6A9141AEB1C00B68376 /* Frameworks */,
+				8603B6AA141AEB1C00B68376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ipocalypse;
+			productName = Ipocalypse;
+			productReference = 8603B6AC141AEB1C00B68376 /* Ipocalypse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8603B6A3141AEB1C00B68376 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8603B6A6141AEB1C00B68376 /* Build configuration list for PBXProject "Ipocalypse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8603B6A1141AEB1C00B68376;
+			productRefGroup = 8603B6AD141AEB1C00B68376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8603B6AB141AEB1C00B68376 /* Ipocalypse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8603B6AA141AEB1C00B68376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8603B6BB141AEB1C00B68376 /* InfoPlist.strings in Resources */,
+				8603B6C4141AEB1C00B68376 /* MainWindow.xib in Resources */,
+				8603B6CA141AEB1C00B68376 /* IpocalypseViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8603B6A8141AEB1C00B68376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8603B6BD141AEB1C00B68376 /* main.m in Sources */,
+				8603B6C1141AEB1C00B68376 /* IpocalypseAppDelegate.m in Sources */,
+				8603B6C7141AEB1C00B68376 /* IpocalypseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8603B6B9141AEB1C00B68376 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8603B6BA141AEB1C00B68376 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8603B6C2141AEB1C00B68376 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8603B6C3141AEB1C00B68376 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8603B6C8141AEB1C00B68376 /* IpocalypseViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8603B6C9141AEB1C00B68376 /* en */,
+			);
+			name = IpocalypseViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8603B6CB141AEB1C00B68376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8603B6CC141AEB1C00B68376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8603B6CE141AEB1C00B68376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
+				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8603B6CF141AEB1C00B68376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ipocalypse/Ipocalypse-Prefix.pch";
+				INFOPLIST_FILE = "Ipocalypse/Ipocalypse-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8603B6A6141AEB1C00B68376 /* Build configuration list for PBXProject "Ipocalypse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8603B6CB141AEB1C00B68376 /* Debug */,
+				8603B6CC141AEB1C00B68376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8603B6CD141AEB1C00B68376 /* Build configuration list for PBXNativeTarget "Ipocalypse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8603B6CE141AEB1C00B68376 /* Debug */,
+				8603B6CF141AEB1C00B68376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8603B6A3141AEB1C00B68376 /* Project object */;
+}
