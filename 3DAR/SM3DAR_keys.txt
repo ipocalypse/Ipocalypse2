@@ -1,11 +1,1 @@
-Replace all text in this file with device and/or application keys, one per line.  To request a key, please use our contact form at http://spotmetrix.com/contact-us/ 
-
-We recommend that you download, build and install the Yorient sample app.  Yorient's code is what we consider best practices for using 3DAR.
-
-It wouldn't hurt to visit http://3dar.us/docs/ and go through a tutorial too.
-
-Ask questions to the community at http://groups.google.com/group/3dar
-
-Post screenshots to http://www.flickr.com/groups/3dar/
-
-Good luck!
+13a6d296d96108ed3b6e7e2dfa4beb3a770da47f
