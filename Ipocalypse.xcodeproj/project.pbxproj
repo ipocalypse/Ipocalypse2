@@ -23,14 +23,14 @@
 		8603B6B0141AEB1C00B68376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8603B6B2141AEB1C00B68376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8603B6B4141AEB1C00B68376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8603B6B8141AEB1C00B68376 /* Ipocalypse-Info.plist */ = {isa = PBXFileReference; path = "Ipocalypse-Info.plist"; sourceTree = "<group>"; };
+		8603B6B8141AEB1C00B68376 /* Ipocalypse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ipocalypse-Info.plist"; sourceTree = "<group>"; };
 		8603B6BA141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8603B6BC141AEB1C00B68376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8603B6BE141AEB1C00B68376 /* Ipocalypse-Prefix.pch */ = {isa = PBXFileReference; path = "Ipocalypse-Prefix.pch"; sourceTree = "<group>"; };
-		8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */ = {isa = PBXFileReference; path = IpocalypseAppDelegate.h; sourceTree = "<group>"; };
+		8603B6BE141AEB1C00B68376 /* Ipocalypse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ipocalypse-Prefix.pch"; sourceTree = "<group>"; };
+		8603B6BF141AEB1C00B68376 /* IpocalypseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpocalypseAppDelegate.h; sourceTree = "<group>"; };
 		8603B6C0141AEB1C00B68376 /* IpocalypseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseAppDelegate.m; sourceTree = "<group>"; };
 		8603B6C3141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */ = {isa = PBXFileReference; path = IpocalypseViewController.h; sourceTree = "<group>"; };
+		8603B6C5141AEB1C00B68376 /* IpocalypseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IpocalypseViewController.h; sourceTree = "<group>"; };
 		8603B6C6141AEB1C00B68376 /* IpocalypseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IpocalypseViewController.m; sourceTree = "<group>"; };
 		8603B6C9141AEB1C00B68376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IpocalypseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
