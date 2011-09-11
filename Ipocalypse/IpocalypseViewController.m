@@ -9,6 +9,7 @@
 #import "IpocalypseViewController.h"
 
 @implementation IpocalypseViewController
+@synthesize mapView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -20,13 +21,37 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
+- (void)mapView:(SM3DARMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+
 {
-    [super viewDidLoad];
+    self.mapView.centerCoordinate = 
+    userLocation.location.coordinate;
+} 
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+
+ - (void)viewDidLoad
+{
+    
+        [super viewDidLoad];
+    mapView.showsUserLocation = YES;
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 37.6833;
+    coordinate.longitude = -120.9918;
+    mapView.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000);
+
+    for(int i = 0; i < 20; i++)
+    {
+        CGFloat latDelta = rand()*.035/RAND_MAX -.02;
+        CGFloat longDelta = rand()*.03/RAND_MAX -.015;
+        
+        CLLocationCoordinate2D newCoord = { coordinate.latitude + latDelta, coordinate.longitude + longDelta };
+        MapAnnotation* annotation = [[MapAnnotation alloc] initWithCoordinate:newCoord];
+        [mapView addAnnotation:annotation];
+        [annotation release];
+    }
+  
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -40,5 +65,22 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+@end
+@implementation MapAnnotation
+@synthesize coordinate = _coordinate;
+
+- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    self = [super init];
+    
+    if (self != nil)
+    {
+        _coordinate = coordinate;
+    }
+    
+    return self;
+}
+
 
 @end
