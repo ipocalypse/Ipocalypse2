@@ -22,7 +22,6 @@
 		8603B6FF141AEC6B00B68376 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8603B6FE141AEC6B00B68376 /* CoreMotion.framework */; };
 		8603B710141AF98600B68376 /* IpocalypseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8603B70F141AF98600B68376 /* IpocalypseViewController.xib */; };
 		8603B718141C1C3900B68376 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B715141C1B1A00B68376 /* Default@2x.png */; };
-		8603B722141C547600B68376 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 8603B721141C547600B68376 /* location.png */; };
 		BEBCAC99141AF57B007E2C96 /* 3dar.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC87141AF57B007E2C96 /* 3dar.plist */; };
 		BEBCAC9A141AF57B007E2C96 /* 3dar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC8A141AF57B007E2C96 /* 3dar_logo.png */; };
 		BEBCAC9B141AF57B007E2C96 /* 3dar_marker_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC8B141AF57B007E2C96 /* 3dar_marker_icon1.png */; };
@@ -59,7 +58,6 @@
 		8603B6FE141AEC6B00B68376 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		8603B70F141AF98600B68376 /* IpocalypseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IpocalypseViewController.xib; sourceTree = "<group>"; };
 		8603B715141C1B1A00B68376 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		8603B721141C547600B68376 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		BEBCAC87141AF57B007E2C96 /* 3dar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3dar.plist; sourceTree = "<group>"; };
 		BEBCAC8A141AF57B007E2C96 /* 3dar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_logo.png; sourceTree = "<group>"; };
 		BEBCAC8B141AF57B007E2C96 /* 3dar_marker_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3dar_marker_icon1.png; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		8603B6A1141AEB1C00B68376 = {
 			isa = PBXGroup;
 			children = (
-				8603B721141C547600B68376 /* location.png */,
 				8603B715141C1B1A00B68376 /* Default@2x.png */,
 				BEBCAC86141AF57B007E2C96 /* 3DAR */,
 				8603B6F4141AEC2A00B68376 /* zombie.png */,
@@ -276,7 +273,6 @@
 				BEBCACA5141AF57C007E2C96 /* SM3DAR_keys.txt in Resources */,
 				8603B710141AF98600B68376 /* IpocalypseViewController.xib in Resources */,
 				8603B718141C1C3900B68376 /* Default@2x.png in Resources */,
-				8603B722141C547600B68376 /* location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
