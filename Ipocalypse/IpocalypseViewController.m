@@ -36,8 +36,8 @@
         [super viewDidLoad];
     mapView.showsUserLocation = YES;
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 37.6833;
-    coordinate.longitude = -120.9918;
+    coordinate.latitude = 51.779;
+    coordinate.longitude = -1.499;
     mapView.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000);
 
     for(int i = 0; i < 20; i++)
