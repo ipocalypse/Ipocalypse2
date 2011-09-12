@@ -28,6 +28,15 @@
     userLocation.location.coordinate;
 } 
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+        
+     [mapView startCamera];
+}
+
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 
  - (void)viewDidLoad
