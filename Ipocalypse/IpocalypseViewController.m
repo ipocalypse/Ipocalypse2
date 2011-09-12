@@ -40,7 +40,7 @@
     coordinate.longitude = -1.499;
     mapView.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000);
 
-    for(int i = 0; i < 20; i++)
+    for(int i = 0; i < 30; i++)
     {
         CGFloat latDelta = rand()*.035/RAND_MAX -.02;
         CGFloat longDelta = rand()*.03/RAND_MAX -.015;
