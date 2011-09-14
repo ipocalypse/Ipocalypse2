@@ -41,27 +41,31 @@
 
  - (void)viewDidLoad
 {
-    
-        [super viewDidLoad];
+    self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)] autorelease]; 
+    mapView.delegate = self;
     mapView.showsUserLocation = YES;
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 51.779;
-    coordinate.longitude = -1.499;
-    mapView.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000);
+    
+    
+    // Only add the mapView and call init3DAR 
+    // if the mapView is not already set up in an .xib file.
+    
+    [self.view addSubview:mapView];   
+    [mapView init3DAR];
 
-    for(int i = 0; i < 30; i++)
-    {
-        CGFloat latDelta = rand()*.035/RAND_MAX -.02;
-        CGFloat longDelta = rand()*.03/RAND_MAX -.015;
-        
-        CLLocationCoordinate2D newCoord = { coordinate.latitude + latDelta, coordinate.longitude + longDelta };
-        MapAnnotation* annotation = [[MapAnnotation alloc] initWithCoordinate:newCoord];
-        [mapView addAnnotation:annotation];
-        [annotation release];
-    }
+        [super viewDidLoad];
   
 }
-
+- (void) sm3darLoadPoints:(SM3DARController *)sm3dar
+{ 
+    SM3DARTexturedGeometryView *modelView = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"cube.obj" textureNamed:nil] autorelease];
+    
+    SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:mapView.sm3dar.userLocation.coordinate.latitude + 0.0005 
+                                                                                    longitude:mapView.sm3dar.userLocation.coordinate.longitude + 0.0005 
+                                                                                     altitude:0 
+                                                                                        title:nil 
+                                                                                         view:modelView] autorelease];
+    [mapView addAnnotation:poi];
+}
 - (void)viewDidUnload
 {
     [super viewDidUnload];
