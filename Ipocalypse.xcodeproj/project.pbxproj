@@ -36,6 +36,7 @@
 		BEBCACA4141AF57B007E2C96 /* lib3DAR_v2_1_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBCAC96141AF57B007E2C96 /* lib3DAR_v2_1_1.a */; };
 		BEBCACA5141AF57C007E2C96 /* SM3DAR_keys.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEBCAC98141AF57B007E2C96 /* SM3DAR_keys.txt */; };
 		BEBCACA8141AF66F007E2C96 /* IpocalypseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBCACA7141AF66F007E2C96 /* IpocalypseViewController.m */; };
+		BEBCACF814216A49007E2C96 /* Creep.obj in Resources */ = {isa = PBXBuildFile; fileRef = BEBCACF714216A49007E2C96 /* Creep.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BEBCAC98141AF57B007E2C96 /* SM3DAR_keys.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SM3DAR_keys.txt; sourceTree = "<group>"; };
 		BEBCACA6141AF665007E2C96 /* IpocalypseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpocalypseViewController.h; sourceTree = "<group>"; };
 		BEBCACA7141AF66F007E2C96 /* IpocalypseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpocalypseViewController.m; sourceTree = "<group>"; };
+		BEBCACF714216A49007E2C96 /* Creep.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Creep.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		BEBCAC8F141AF57B007E2C96 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				BEBCACF714216A49007E2C96 /* Creep.obj */,
 				BEBCAC90141AF57B007E2C96 /* cube.obj */,
 				BEBCAC91141AF57B007E2C96 /* moebius.obj */,
 				BEBCAC92141AF57B007E2C96 /* sphere.obj */,
@@ -273,6 +276,7 @@
 				BEBCACA5141AF57C007E2C96 /* SM3DAR_keys.txt in Resources */,
 				8603B710141AF98600B68376 /* IpocalypseViewController.xib in Resources */,
 				8603B718141C1C3900B68376 /* Default@2x.png in Resources */,
+				BEBCACF814216A49007E2C96 /* Creep.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
