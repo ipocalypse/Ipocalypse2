@@ -41,7 +41,7 @@
 
  - (void)viewDidLoad
 {
-    self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)] autorelease]; 
+    self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)] autorelease]; 
     mapView.delegate = self;
     mapView.showsUserLocation = YES;
     
