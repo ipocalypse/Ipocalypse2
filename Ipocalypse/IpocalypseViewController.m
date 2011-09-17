@@ -45,7 +45,6 @@
     mapView.delegate = self;
     mapView.showsUserLocation = YES;
     
-    
     // Only add the mapView and call init3DAR 
     // if the mapView is not already set up in an .xib file.
     
@@ -53,8 +52,15 @@
     [mapView init3DAR];
 
         [super viewDidLoad];
+    NSString *Uid = @"test12345";
+    NSString *Latitude = @"37.3229978"; 
+    NSString *Longitude = @"-122.0321823";
+    
+    NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
+    [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
   
 }
+
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
 { 
     SM3DARTexturedGeometryView *modelView = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"Creep.obj" textureNamed:nil] autorelease];
