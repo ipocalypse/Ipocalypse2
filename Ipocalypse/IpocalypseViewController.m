@@ -10,6 +10,7 @@
 
 @implementation IpocalypseViewController
 @synthesize mapView;
+@synthesize locationManager;
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,9 +53,20 @@
     [mapView init3DAR];
 
         [super viewDidLoad];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    
+    CLLocation *location = [locationManager location];
+    
+    // Configure the new event with information from the location
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
+    NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
+    
     NSString *Uid = @"test12345";
-    NSString *Latitude = @"37.3229978"; 
-    NSString *Longitude = @"-122.0321823";
     
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
