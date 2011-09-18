@@ -53,6 +53,7 @@
     [mapView init3DAR];
 
         [super viewDidLoad];
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -66,7 +67,7 @@
     NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
     NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
     
-    NSString *Uid = @"test12345";
+    NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
     
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
