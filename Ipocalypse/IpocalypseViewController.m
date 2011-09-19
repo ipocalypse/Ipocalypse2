@@ -54,21 +54,19 @@
 
         [super viewDidLoad];
     
+    // Upload UID, LAT, and LONG to server
+    
     locationManager = [[CLLocationManager alloc] init];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     [locationManager startUpdatingLocation];
     
     CLLocation *location = [locationManager location];
-    
-    // Configure the new event with information from the location
     CLLocationCoordinate2D coordinate = [location coordinate];
     
     NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
     NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
-    
     NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
-    
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
   
