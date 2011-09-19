@@ -75,6 +75,7 @@
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
 { 
     SM3DARTexturedGeometryView *modelView = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"Creep.obj" textureNamed:nil] autorelease];
+    SM3DARTexturedGeometryView *model2View = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"cube.obj" textureNamed:nil] autorelease];
     
     SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:mapView.sm3dar.userLocation.coordinate.latitude + 0.0004
                                                                                     longitude:mapView.sm3dar.userLocation.coordinate.longitude + 0.0001 
@@ -82,6 +83,12 @@
                                                                                         title:nil 
                                                                                          view:modelView] autorelease];
     
+    SM3DARPointOfInterest *poi2 = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:mapView.sm3dar.userLocation.coordinate.latitude + 0.0009
+                                                                                    longitude:mapView.sm3dar.userLocation.coordinate.longitude + 0.0001 
+                                                                                     altitude:0 
+                                                                                        title:nil 
+                                                                                         view:model2View] autorelease];
+    [mapView addAnnotation:poi2];
     [mapView addAnnotation:poi];
 }
 - (void)viewDidUnload
