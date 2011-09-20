@@ -7,6 +7,7 @@
 //
 
 #import "IpocalypseViewController.h"
+#import "JSON.h"
 
 @implementation IpocalypseViewController
 @synthesize mapView;
@@ -29,30 +30,34 @@
     userLocation.location.coordinate;
 } 
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-        
-     [mapView startCamera];
-}
-
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 
  - (void)viewDidLoad
 {
-    self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)] autorelease]; 
-    mapView.delegate = self;
-    mapView.showsUserLocation = YES;
     
     // Only add the mapView and call init3DAR 
     // if the mapView is not already set up in an .xib file.
     
     [self.view addSubview:mapView];   
     [mapView init3DAR];
+    
+    [super viewDidLoad];
+    
+    //JSON Test Code to see if it is working In console log it will show:
+    //Dictionary value for 'foo' is 'bar
+    
+    NSString *jsonString = [NSString stringWithString:@"{\"foo\": \"bar\"}"];
+    NSDictionary *dictionary = [jsonString JSONValue];
+    NSLog(@"Dictionary value for \"foo\" is \"%@\"", [dictionary objectForKey:@"foo"]);
+    
+    
+    
+    self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)] autorelease]; 
+    mapView.delegate = self;
+    mapView.showsUserLocation = YES;
+    
 
-        [super viewDidLoad];
     
     // Upload UID, LAT, and LONG to server
     
@@ -70,6 +75,10 @@
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
   
+}
+
+- (void)dealloc{
+    [super dealloc];
 }
 
 - (void) sm3darLoadPoints:(SM3DARController *)sm3dar
@@ -91,6 +100,14 @@
     [mapView addAnnotation:poi2];
     [mapView addAnnotation:poi];
 }
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [mapView startCamera];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
