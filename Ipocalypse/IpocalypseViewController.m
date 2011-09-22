@@ -43,16 +43,10 @@
     [mapView init3DAR];
     
     [super viewDidLoad];
-    
-    //JSON Test Code to see if it is working In console log it will show:
-    //Dictionary value for 'foo' is 'bar
-    
-    NSString *jsonString = [NSString stringWithString:@"{\"foo\": \"bar\"}"];
-    NSDictionary *dictionary = [jsonString JSONValue];
-    NSLog(@"Dictionary value for \"foo\" is \"%@\"", [dictionary objectForKey:@"foo"]);
-    
-    
-    
+    responseData = [[NSMutableData data] retain];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
+        
     self.mapView = [[[SM3DARMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)] autorelease]; 
     mapView.delegate = self;
     mapView.showsUserLocation = YES;
@@ -75,6 +69,32 @@
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
   
+}
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+	[responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	label.text = [NSString stringWithFormat:@"Connection failed: %@", [error description]];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	[connection release];
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	[responseData release];
+    
+	NSArray *luckyNumbers = [responseString JSONValue];
+    
+	NSMutableString *text = [NSMutableString stringWithString:@"Lucky numbers:\n"];
+    
+	for (int i = 0; i < [luckyNumbers count]; i++)
+		[text appendFormat:@"%@\n", [luckyNumbers objectAtIndex:i]];
+    
+	label.text =  text;
 }
 
 - (void)dealloc{

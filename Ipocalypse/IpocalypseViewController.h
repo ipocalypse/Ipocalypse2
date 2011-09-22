@@ -14,6 +14,8 @@
 @interface IpocalypseViewController : UIViewController<MKMapViewDelegate> {
     IBOutlet SM3DARMapView *mapView;
     CLLocationManager *locationManager;
+    IBOutlet UILabel *label;
+	NSMutableData *responseData;
 }
 @property (nonatomic, retain) IBOutlet SM3DARMapView *mapView;
 @property (nonatomic, retain) CLLocationManager *locationManager;
