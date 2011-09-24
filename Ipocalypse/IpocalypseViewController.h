@@ -10,12 +10,15 @@
 #import <MapKit/MapKit.h>
 #import "SM3DAR.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SBjson.h"
+
 
 @interface IpocalypseViewController : UIViewController<MKMapViewDelegate> {
     IBOutlet SM3DARMapView *mapView;
     CLLocationManager *locationManager;
     IBOutlet UILabel *label;
 	NSMutableData *responseData;
+    
 }
 @property (nonatomic, retain) IBOutlet SM3DARMapView *mapView;
 @property (nonatomic, retain) CLLocationManager *locationManager;
