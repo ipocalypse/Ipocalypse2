@@ -44,15 +44,12 @@
 - (void)viewDidLoad
 {
     mapView.delegate = self;
-    mapView.showsUserLocation = YES;
+    mapView.showsUserLocation = NO;
     
     
     [super viewDidLoad];
-    responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    // Upload UID, LAT, and LONG to server
     
+    // Upload UID, LAT, and LONG to server
     locationManager = [[CLLocationManager alloc] init];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -66,6 +63,11 @@
     NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
+    
+    //Get data from mysql
+    responseData = [[NSMutableData data] retain];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
