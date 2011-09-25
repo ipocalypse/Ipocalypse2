@@ -85,36 +85,45 @@
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	[responseData release];
     
-    
-    
-    
-    
     SBJsonParser *json = [[SBJsonParser new] autorelease];
     
     NSError *jsonError;
-    
-    NSArray *locations = [json objectWithString:responseString error:&jsonError];
-    NSArray *Uid = [locations valueForKey:@"Uid"];
-    NSArray *Latitude = [locations valueForKey:@"Latitude"];
-    NSArray *Longitude = [locations valueForKey:@"Longitude"];
-    [responseString release];
-    
-    
-    
-}
 
-- (void) sm3darLoadPoints:(SM3DARController *)sm3dar
-{ 
+    NSArray *locations = [json objectWithString:responseString error:&jsonError];
+   // NSLog(@"Longitude: %@", [locations valueForKey:@"Longitude"]); 
+  //  NSLog(@"Latitude: %@", [locations valueForKey:@"Latitude"]); 
+   // NSString *getLat = [[NSString alloc] initWithFormat: @"%@", [locations valueForKey:@"Latitude"]];
+   // NSString *getLong = [[NSString alloc] initWithFormat: @"%@", [locations valueForKey:@"Longitude"]];
+   // NSArray *Uid = [locations valueForKey:@"Uid"];
+   // NSArray *Latitude = [locations valueForKey:@"Latitude"];
+  //  NSArray *Longitude = [locations valueForKey:@"Longitude"];
+    CLLocationCoordinate2D corde;
+
+    //corde.latitude = [getLat doubleValue];
+    
+    //corde.longitude = [getLong doubleValue];
+    
+    for (int i=0; i<[locations count]; i++){
+    corde.latitude = [[[locations objectAtIndex:i] valueForKey:@"Latitude"]floatValue];
+    corde.longitude = [[[locations objectAtIndex:i] valueForKey:@"Longitude"]floatValue];
+    
     
     SM3DARTexturedGeometryView *modelView = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"cube.obj" textureNamed:nil] autorelease];
     
-    SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:mapView.sm3dar.userLocation.coordinate.latitude + 0.0004
-                                                                                    longitude:mapView.sm3dar.userLocation.coordinate.longitude + 0.0001 
+    SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:corde.latitude
+                                                                                    longitude:corde.longitude
                                                                                      altitude:0 
                                                                                         title:nil 
                                                                                          view:modelView] autorelease];
     
     [mapView addAnnotation:poi];
+    }
+}
+
+- (void) sm3darLoadPoints:(SM3DARController *)sm3dar
+{ 
+
+
 }
 
 - (void)viewDidUnload
