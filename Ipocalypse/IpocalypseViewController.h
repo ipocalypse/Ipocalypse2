@@ -24,10 +24,3 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @end
 
-@interface MapAnnotation : NSObject <MKAnnotation> {
-    CLLocationCoordinate2D _coordinate;
-}
-
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
-
-@end

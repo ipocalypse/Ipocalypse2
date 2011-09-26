@@ -15,13 +15,10 @@
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
 
 - (void)mapView:(SM3DARMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 
@@ -37,17 +34,17 @@
     [mapView startCamera];
 }
 
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-
 - (void)viewDidLoad
 {
     mapView.delegate = self;
-    mapView.showsUserLocation = NO;
+    mapView.showsUserLocation = YES;
     
     
     [super viewDidLoad];
+    //Get data from mysql
+    responseData = [[NSMutableData data] retain];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     // Upload UID, LAT, and LONG to server
     locationManager = [[CLLocationManager alloc] init];
@@ -63,11 +60,6 @@
     NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
-    
-    //Get data from mysql
-    responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
@@ -98,10 +90,13 @@
     
     CLLocationCoordinate2D corde;
     
+    //Place User locations on Map and in 3DAR with UID
     
     for (int i=0; i<[locations count]; i++){
         corde.latitude = [[[locations objectAtIndex:i] valueForKey:@"Latitude"]floatValue];
         corde.longitude = [[[locations objectAtIndex:i] valueForKey:@"Longitude"]floatValue];
+          NSString *Uid = [[locations valueForKey:@"Uid"]objectAtIndex:i];
+        
         
         
         SM3DARTexturedGeometryView *modelView = [[[SM3DARTexturedGeometryView alloc] initWithOBJ:@"cube.obj" textureNamed:nil] autorelease];
@@ -110,7 +105,7 @@
         SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:corde.latitude
                                                                                         longitude:corde.longitude
                                                                                          altitude:0 
-                                                                                            title:nil 
+                                                                                            title:Uid
                                                                                              view:modelView] autorelease];
         
         
@@ -138,22 +133,5 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-@end
-@implementation MapAnnotation
-@synthesize coordinate = _coordinate;
-
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate
-{
-    self = [super init];
-    
-    if (self != nil)
-    {
-        _coordinate = coordinate;
-    }
-    
-    return self;
-}
-
 
 @end
