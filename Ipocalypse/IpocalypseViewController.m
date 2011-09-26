@@ -95,7 +95,7 @@
     for (int i=0; i<[locations count]; i++){
         corde.latitude = [[[locations objectAtIndex:i] valueForKey:@"Latitude"]floatValue];
         corde.longitude = [[[locations objectAtIndex:i] valueForKey:@"Longitude"]floatValue];
-          NSString *Uid = [[locations valueForKey:@"Uid"]objectAtIndex:i];
+          NSString *Name = [[locations valueForKey:@"Name"]objectAtIndex:i];
         
         
         
@@ -105,7 +105,7 @@
         SM3DARPointOfInterest *poi = (SM3DARPointOfInterest *)[[mapView.sm3dar addPointAtLatitude:corde.latitude
                                                                                         longitude:corde.longitude
                                                                                          altitude:0 
-                                                                                            title:Uid
+                                                                                            title:Name
                                                                                              view:modelView] autorelease];
         
         
@@ -117,7 +117,6 @@
         [mapView addAnnotation:poi2];
         [mapView addAnnotation:poi];
     }
-
 
 }
 
