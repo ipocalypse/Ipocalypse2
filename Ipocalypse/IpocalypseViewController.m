@@ -13,6 +13,8 @@
 @synthesize mapView;
 @synthesize locationManager;
 
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -39,12 +41,22 @@
     mapView.delegate = self;
     mapView.showsUserLocation = YES;
     
-    
     [super viewDidLoad];
     //Get data from mysql
     responseData = [[NSMutableData data] retain];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.grif.tv/json.php"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    [NSThread detachNewThreadSelector:@selector(UploadUserLocation:) toTarget:self withObject:nil];
+    
+}
+
+-(void) UploadUserLocation:(id)anObject {
+    
+
+    NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+    
+    for (int i=0; i<1000000; i++){
     
     // Upload UID, LAT, and LONG to server
     locationManager = [[CLLocationManager alloc] init];
@@ -55,11 +67,23 @@
     CLLocation *location = [locationManager location];
     CLLocationCoordinate2D coordinate = [location coordinate];
     
+    
     NSString *Latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
     NSString *Longitude = [NSString stringWithFormat:@"%f", coordinate.longitude];
     NSString *Uid = [[UIDevice currentDevice] uniqueIdentifier];
     NSString *post = [NSString stringWithFormat:@"http://www.grif.tv/add2.php?Uid=%@&Latitude=%@&Longitude=%@", Uid, Latitude, Longitude];
     [NSData dataWithContentsOfURL:[NSURL URLWithString:post]];
+        [NSThread sleepForTimeInterval:5.0];    
+    }
+    [NSThread exit];
+    
+    //we need to do this to prevent memory leaks
+    
+    [autoreleasepool release];
+
+}
+- (void)PopulateMap
+{
     
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response 
@@ -89,7 +113,6 @@
     NSArray *locations = [json objectWithString:responseString error:&jsonError];
     
     CLLocationCoordinate2D corde;
-    
     //Place User locations on Map and in 3DAR with UID
     
     for (int i=0; i<[locations count]; i++){
@@ -123,6 +146,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
